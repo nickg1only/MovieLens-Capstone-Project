@@ -13,7 +13,7 @@ MovieLens is a website run by GroupLens, a research lab in the Department of Com
 
 To evaluate my recommendation system, I used the Root Mean Squared Error, or RMSE, metric. When I make recommendations using my model, a smaller RMSE indicates better recommendations for the dataset I'm predicting on.
 
-This project uses a dataset that was created in 2009. It contains 10 million ratings of 10,000 movies rated by 72,000 users. There are a total of 100,000 tag applications. I used this dataset rather than the latest dataset provided on MovieLens because computing the predictions would be more feasible with a smaller dataset rather than a larger (but more recent) dataset.
+This project uses a dataset that was created in 2009. It contains 10 million ratings of 10,000 movies rated by 72,000 users. There are a total of 100,000 tag applications. I used this dataset rather than the latest dataset provided on MovieLens because computing the predictions would be more feasible to run within a reasonable amount of time with a smaller dataset rather than a larger (but more recent) dataset.
 
 For this project, the dataset was split into a training set and a validation set. The idea was to create a model that is trained on the training set, and then test that model's performance on the validation set.
 
@@ -50,7 +50,7 @@ I then validated my model using the validation set, and I got an RMSE of 0.86472
 
 ## Conclusion
 
-The bias-based model was the most feasible I could have employed to predict the ratings, as other models using the *train* function from the *caret* package were taking _way_ too long to run.
+The bias-based model was the most feasible model I could have employed to predict the ratings, as other models using the *train* function from the *caret* package were taking _way_ too long to run.
 
 The limitations of this model is that there has to be information about the movie, user, genre, and time of the ratings in order for this model to work. On top of that, the final RMSE value was not ideal and could have been improved with a better model or better selection of biases.
 
